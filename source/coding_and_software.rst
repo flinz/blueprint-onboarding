@@ -12,6 +12,9 @@ Some of the below are lab-wide policies that should be followed. These are **mar
 Code guidelines
 ---------------
 
+Internal/development code
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Code should be stored in a **git repository on C4Science, accessible to the LCN group**. Please, exclude your data files from these repositories (see `Code vs Data`_).
 
 * For each project that you develop code for, create a Git repository at https://c4science.ch 
@@ -23,6 +26,18 @@ Code should be stored in a **git repository on C4Science, accessible to the LCN 
 
 .. image:: ../img/policy-choosing.png
    :alt: Add two policies, one for LCN-Internals, one for "Repository Author".
+
+Publication code
+~~~~~~~~~~~~~~~~
+
+Publicly released code should be stored in a public **Github repository**.
+
+* Create a personal Github account
+* Push your local git repository to a GitHub repository
+* Your repository will then be forked into a repository at https://github.com/EPFL-LCN
+
+This policy is established so both you, and the lab administrators, have control over the publicly available repositories.
+
 		
 Code Quality
 ~~~~~~~~~~~~
