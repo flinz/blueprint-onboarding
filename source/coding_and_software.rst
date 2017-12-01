@@ -85,8 +85,32 @@ Coming soon.
 
 Data guidelines
 ---------------
-* GIT HDFS
-* Lab servers
+
+Storage possibilities
+~~~~~~~~~~~~~~~~~~~~~
+
+GIT LFS
+^^^^^^^
+For files <1GB, you can use Git LFS as offered by `C4Science <https://c4science.ch/w/c4science/lfs>`_.
+
+Icfiler
+^^^^^^^
+For large data files, you can use shared lab storage. On all lab machines (lcncal1-5 and lcnsrv1-4), this is mounted as
+
+.. code-block:: bash
+
+    /lcncluster
+
+To access Icfiler from your own machine, you need to be connected to the EPFL network (use VPN if at home) and mount the following SMB share:
+
+.. code-block:: bash
+
+    smb://icfiler2.epfl.ch/lcncluster
+
+Switch drive
+^^^^^^^^^^^^
+
+EPFL offers a free and swiss-hosted "dropbox" for all staff and students. Head over to `Switchdrive <https://drive.switch.ch>`_ to access it.
 
 Code vs Data
 ------------
