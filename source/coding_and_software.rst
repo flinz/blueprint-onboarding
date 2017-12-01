@@ -17,7 +17,7 @@ Internal/development code
 
 Code should be stored in a **git repository on C4Science, accessible to the LCN group**. Please, exclude your data files from these repositories (see `Code vs Data`_).
 
-* For each project that you develop code for, create a Git repository at https://c4science.ch 
+* For each project that you develop code for, create a Git repository at https://c4science.ch
 * Make your Git repository readable for the members of the LCN-Internals project
 
   - Go to https://c4science.ch/diffusion/REPOSITORY_URL/manage/policies
@@ -38,7 +38,7 @@ Publicly released code should be stored in a public **Github repository**.
 
 This policy is established so both you, and the lab administrators, have control over the publicly available repositories.
 
-		
+
 Code Quality
 ~~~~~~~~~~~~
 
@@ -101,11 +101,20 @@ For large data files, you can use shared lab storage. On all lab machines (lcnca
 
     /lcncluster
 
-To access Icfiler from your own machine, you need to be connected to the EPFL network (use VPN if at home) and mount the following SMB share:
+To access Icfiler from your own machine, you need to be connected to the EPFL network (use VPN if at home). You can then either:
+
+1. mount the following SMB share
 
 .. code-block:: bash
 
     smb://icfiler2.epfl.ch/lcncluster
+
+2. mount the drive using sshfs over one of our lab machines (here we use lcncal1)
+
+.. code-block:: shell
+
+    mkdir mount_dir
+    sshfs gaspar_username@lcncal1:/lcncluster mount_dir
 
 Switch drive
 ^^^^^^^^^^^^
@@ -136,7 +145,7 @@ Common examples for data formats are: plain text, CVS, HDF5.
 
 Data files have the following properties:
 
-* Large: Depending on the volume of data and its format, data files tend to use more space than code. 
+* Large: Depending on the volume of data and its format, data files tend to use more space than code.
 * Independent of interpreter: data files can ideally be read from and written to by several interpreters, if general formats are used.
 * Change rarely: most scientific data will usually be static, i.e. you will not change a single number here and there. If you often add measurements or simulations, this should produce additional data files.
 * Not suitable for versioned control: due to the larger size of data files, they do not (or very rarely) lend themselves to versioned storage. On the bright side, data files also change rarely, and therefore do not benefit much from version control.
